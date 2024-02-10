@@ -1,40 +1,79 @@
 /* reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 ul {
     list-style: none;
 }
+
+/* general */
+
 :root {
     --color-scondary: #ffffff;
     --color-primary: #23272a;
     --color-header-bg: #255ee9;
     --color-section-bg: #f6f6f6;
-    --color-contrast: #aebbe7;
+    --color-contrast: #7289da;
 }
-
-/* general */
 
 .debug {
     border: 2px solid red;
 }
+
 body {
     font-family: "Noto Sans", sans-serif;
     background-color: var(--color-scondary);
-     color: var(--color-primary);
+    color: var(--color-primary);
 }
+
+img {
+    max-width: 100%;
+}
+
+i:not(:last-child) {
+    font-size: large;
+    margin-right: 20px;
+}
+
 /* header  */
 
 header {
-background-color: var(--color-header-bg);
-color: var(--color-scondary);
+    background-color: var(--color-header-bg);
+    color: var(--color-scondary);
 }
+
 #hero {
     background-image: url("../img/jumbo.png");
     min-height: 500px;
     background-size: cover;
+    align-items: center;
+}
+
+#hero>div.small-container p {
+    padding: 30px 0px;
+}
+
+#hero>div>div a {
+    padding: 0 10px;
+}
+
+nav div span,
+header nav a {
+    font-size: small;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+nav div span a{
+    color: var(--color-scondary);
+    margin: 10px;
+}
+
+header nav>a {
+    display: block;
 }
 
 /* main  */
@@ -42,48 +81,183 @@ color: var(--color-scondary);
 .section-bg {
     background-color: var(--color-section-bg);
 }
+
+section#feature>div>img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+section#channel>div>img {
+    width: 100%;
+    vertical-align: bottom;
+    transform: scaleY(-1);
+    background-color: var(--color-scondary);
+}
+
+section#community>div>img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
 .left {
     width: 60%;
 }
-.left img {
-    width: 100%;
-}
+
 .right {
-    width: 40%;
+    width: 35%;
     padding-top: 3%;
+    padding-left: 20px;
 }
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+h2+p {
+    font-weight: 500;
+}
+
+h3 {
+    font-size: x-large;
+}
+
+#technology div {
+    text-align: center;
+    width: 70%;
+}
+
+.small-container h3 {
+    display: inline-block;
+    padding: 2% 5%;
+    background-image: url(../img/stars.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#call-to-action {
+    padding-bottom: 100px;
+}
+
 /* footer  */
 
 footer {
     background-color: var(--color-primary);
     color: var(--color-scondary);
+    padding-bottom: 10px;
 }
+
 footer .top {
     border-bottom: 1px solid var(--color-contrast);
 }
+
+footer ul li {
+    padding-bottom: 15px;
+    font-size: small;
+}
+
+footer ul li:first-child,
+footer h3 {
+    color: var(--color-contrast);
+}
+
+footer div>div:first-child {
+    max-width: 20%;
+}
+
+footer div:last-child {
+    padding-bottom: 30px;
+}
+
+footer img {
+    width: 10%;
+}
+
 /* utility  */
+.vert-align {
+    vertical-align: middle;
+}
+
+.bg-contrast {
+    background-color: var(--color-contrast);
+}
+
+.bg-black {
+    background-color: var(--color-primary);
+}
+
+.color-white {
+    color: var(--color-scondary);
+}
+
+.color-black {
+    color: var(--color-primary);
+}
+
+.no-bg {
+    background-color: transparent;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: 0;
+    border-radius: 20px;
+}
+
+button:hover {
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    color: orange;
+}
 
 .container {
-    max-width: 1200px;
+    max-width: 85%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px 50px;
 }
+
 .small-container {
-    max-width: 1200px;
-    margin: 0 auto; 
-    text-align: center;    
+    line-height: 30px;
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.increase-padding-top {
+    padding-top: 60px;
+}
+
+
+.no-padding {
+    padding: 0;
 }
 /* utility flex  */
 
 .d-flex {
     display: flex;
 }
+.d-inline-block {
+    display: inline-block;
+}
 .row-reverse {
     flex-direction: row-reverse;
 }
+
+.column {
+    flex-direction: column;
+}
+
 .space-between {
     justify-content: space-between;
 }
+
 .align-items-center {
     align-items: center;
     align-content: center;
